@@ -1,6 +1,7 @@
-import { Component, afterNextRender } from '@angular/core';
+import { Component, afterNextRender, inject } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from '../app-routing.module';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,11 @@ import { AppRoutingModule } from '../app-routing.module';
 })
 export class AppComponent {
   title = "TEST123"
+
+  // login(){
+  //   inject(AuthService).login()
+  //   //console.log("hello")
+  // }
+  
 }
 

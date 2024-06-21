@@ -9,19 +9,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ContactComponent implements OnInit{
   persone: any
-  persona: any
-  isProfile: boolean
+  //persona: any
+  //isProfile: boolean
   constructor(private servizioProva: ServizioProvaService, private route: ActivatedRoute){}
 
   ngOnInit(): void {
-   if(this.route.snapshot.paramMap.get('id')){
-    this.isProfile = true
-    this.persona = this.servizioProva.getPersona(parseInt(this.route.snapshot.paramMap.get('id')!))
-   }
-   else{
-    this.isProfile = false
-    this.persone = this.servizioProva.getPersone()
-   }
+  //  if(this.route.snapshot.paramMap.get('id')){
+  //   this.isProfile = true
+  //   this.persona = this.servizioProva.getPersona(parseInt(this.route.snapshot.paramMap.get('id')!))
+  //  }
+  //  else{
+  //   this.isProfile = false
+  //   this.persone = this.servizioProva.getPersone()
+  //  }
+  this.persone = this.servizioProva.getPersone()
   }
 
 }
